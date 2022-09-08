@@ -2,6 +2,10 @@
 
 set -e
 
+echo Your container args are: "$@"
+
+echo Auth: "$auth"
+
 if [ $auth = "username" ]; 
 then
     sh -c "jfrog config --interactive=false --enc-password=true --url=$url --user=$user --password=$pass"
